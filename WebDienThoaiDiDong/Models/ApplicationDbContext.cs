@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace WebDienThoaiDiDong.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //Dinh nghia ket noi model DienThoai
+        public DbSet<DienThoai> DienThoais { get; set; }
+
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("WebDienThoaiConnection", throwIfV1Schema: false)
         {
         }
 
@@ -13,5 +17,7 @@ namespace WebDienThoaiDiDong.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebDienThoaiDiDong.Models.DanhMuc> DanhMucs { get; set; }
     }
 }

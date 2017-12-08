@@ -196,14 +196,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DienThoaisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712080704541_InitDatabaseModel.cs" />
+    <Compile Include="Migrations\201712080704541_InitDatabaseModel.Designer.cs">
+      <DependentUpon>201712080704541_InitDatabaseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080729361_CreateDanhMucTable.cs" />
+    <Compile Include="Migrations\201712080729361_CreateDanhMucTable.Designer.cs">
+      <DependentUpon>201712080729361_CreateDanhMucTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080732300_PopulateDanhMuc.cs" />
+    <Compile Include="Migrations\201712080732300_PopulateDanhMuc.Designer.cs">
+      <DependentUpon>201712080732300_PopulateDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\DanhMuc.cs" />
+    <Compile Include="Models\DienThoai.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -309,9 +325,19 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_LayoutThemePhone.cshtml" />
     <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\DienThoais\Create.cshtml" />
+    <Content Include="Views\DienThoais\Delete.cshtml" />
+    <Content Include="Views\DienThoais\Details.cshtml" />
+    <Content Include="Views\DienThoais\Edit.cshtml" />
+    <Content Include="Views\DienThoais\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\admin-theme\css\" />
+    <Folder Include="Content\admin-theme\images\" />
+    <Folder Include="Content\admin-theme\img\" />
+    <Folder Include="Content\admin-theme\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -321,6 +347,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712080704541_InitDatabaseModel.resx">
+      <DependentUpon>201712080704541_InitDatabaseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080729361_CreateDanhMucTable.resx">
+      <DependentUpon>201712080729361_CreateDanhMucTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080732300_PopulateDanhMuc.resx">
+      <DependentUpon>201712080732300_PopulateDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

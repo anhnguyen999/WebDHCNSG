@@ -1,0 +1,59 @@
+﻿@model WebDienThoaiDiDong.Models.DienThoai
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DienThoai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

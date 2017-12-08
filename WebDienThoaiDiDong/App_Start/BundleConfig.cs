@@ -30,6 +30,26 @@ namespace WebDienThoaiDiDong
                       "~/Content/style.css",
                       "~/Content/responsiveslides.css"));
 
+            #region admin layout
+
+            bundles.Add(new StyleBundle("~/Content/admin/css").Include(
+                "~/Content/admin-theme/css/bootstrap.min.css",
+                "~/Content/admin-theme/css/bootstrap-responsive.min.css",
+                "~/Content/admin-theme/css/uniform.css",
+                "~/Content/admin-theme/css/select2.css",
+                "~/Content/admin-theme/css/maruti-style.css",
+                "~/Content/admin-theme/css/maruti-media.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/admin/jslibrary").Include(
+                "~/Content/admin-theme/js/jquery.ui.custom.js",
+                "~/Content/admin-theme/js/jquery.uniform.js",
+                "~/Content/admin-theme/js/select2.min.js",
+                "~/Content/admin-theme/js/jquery.dataTables.min.js",
+                "~/Content/admin-theme/js/maruti.js",
+                "~/Content/admin-theme/js/maruti.tables.js"));
+
+            #endregion
+
             BundleTable.EnableOptimizations = false;
         }
     }
